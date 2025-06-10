@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/ashokitschool/maven-web-app.git'
+                git 'https://github.com/Moinbasha-Shaik/Jenkins'
             }
         }
         stage('Maven Build') {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Docker Image') {
             steps {
-                sh 'docker build -t ashokit/mavenwebapp .'
+                sh 'docker build -t basha/mavenwebapp .'
             }
         }
         stage('k8s deployment') {
